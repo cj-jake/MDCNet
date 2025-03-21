@@ -1,0 +1,18 @@
+
+ # dataset root dir
+train: E:\study\code\python\objectdection\roadDemageDetection\data\images\train # train images (relative to 'path') 118287 images
+val: E:\study\code\python\objectdection\roadDemageDetection\data\images\val # val images (relative to 'path') 5000 images
+test: E:\study\code\python\objectdection\roadDemageDetection\data\images\test
+#test: E:\study\code\python\objectdection\roadDemageDetection\data\selfdata\images
+nc: 6
+
+#['Alligator crack', 'Pothole', 'Longitudinal crack', 'Oblique crack', 'Transverse crack', 'Repair']
+# Classes
+names:
+  0: Alligator crack
+  1: Pothole
+  2: Longitudinal crack
+  3: Oblique crack
+  4: Transverse crack
+  5: Repair
+
