@@ -3,40 +3,56 @@
 
 
 <div class="video-container">
-  <video autoplay muted loop>
-       <source src="https://cj-jake.github.io/MDCNet/videos/paper05.mp4" type="video/mp4">
-  </video>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://cj-jake.github.io/MDCNet/videos/paper05.mp4" allowfullscreen>
+    </iframe>
+  </div>
 </div>
+
 <style>
-  /* 重置页面默认样式 */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  /* 外层容器设置 */
+  /* 背景渐变，让整体 UI 更现代 */
   .video-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 让视频垂直居中 */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* 蓝色渐变背景 */
   }
-  /* 视频设置 */
-  .video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    /* 如果背景不需要黑色，可以去掉 background-color */
-    background-color: transparent;
+
+  /* 视频外框，带阴影和动画 */
+  .video-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* 鼠标悬停时增加放大效果 */
+  .video-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+
+  /* 响应式适配 */
+  @media (max-width: 768px) {
+    .video-wrapper {
+      width: 95%;
+    }
+
+    iframe {
+      height: 300px;
+    }
   }
 </style>
+
+
