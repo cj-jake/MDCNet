@@ -4,7 +4,7 @@
 
 <div class="video-container">
   <video autoplay muted loop>
-       <source src="https://github.com/cj-jake/MDCNet/raw/refs/heads/master/videos/paper05.mp4" type="video/mp4">
+       <source src="https://cj-jake.github.io/MDCNet/videos/paper05.mp4" type="video/mp4">
   </video>
 </div>
 <style>
@@ -40,5 +40,3 @@
     background-color: transparent;
   }
 </style>
-
-
